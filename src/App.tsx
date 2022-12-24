@@ -1,10 +1,13 @@
 import { Router } from "./router";
 import { BrowserRouter } from "react-router-dom";
+import { FormProvider } from "./contexts/FormContext";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <FormProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </FormProvider>
   );
 };
